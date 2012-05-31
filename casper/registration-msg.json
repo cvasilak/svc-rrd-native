@@ -1,39 +1,45 @@
 {
   "instanceId" : "df212wxd-ff77-4c23-8208-7a0d5b0ced31",
-  "listeningQueue" : "jms:casper/svc_rrd?connectionFactory=#ConnectionFactory",
+  "listeningQueue" : "jms:klnnms05/svc_rrd?connectionFactory=#ConnectionFactory",
   "nes" : [ {
     "prefixId" : "100",
     "groups" : [ {
-      "name" : "cpu",
+      "name" : "catusage",
+      "dir" : "klnnms05:/opt/nms/Catalyst/rrd",
       "rras" : [ {
-        "name" : "cpu5sec",
-        "type" : "ABSOLUTE",
-        "descr" : "CPU 5sec"
+        "name" : "cpuusage",
+        "type" : "PERCENT",
+        "descr" : "CPU Usage"
       }, {
-        "name" : "cpu5min",
+        "name" : "bususage",
+        "type" : "PERCENT",
+        "descr" : "Bus Usage"
+      } ]
+    } ]
+  }, {
+    "prefixId" : "211",
+    "groups" : [ {
+      "name" : "bw",
+      "dir" : "klnnms05:/opt/nms/Catalyst/rrd",
+      "rras" : [ {
+        "name" : "input",
         "type" : "ABSOLUTE",
-        "descr" : "CPU 5min"
+        "descr" : "In"
       }, {
-        "name" : "cpu1min",
+        "name" : "output",
         "type" : "ABSOLUTE",
-        "descr" : "CPU 1min"
+        "descr" : "Out"
       } ]
     }, {
-      "name" : "mem",
+      "name" : "updown",
+      "dir" : "klnnms05:/opt/nms/Catalyst/rrd",
       "rras" : [ {
-        "name" : "memutil",
+        "name" : "updown",
         "type" : "ABSOLUTE",
-        "descr" : "Utilization"
-      }, {
-        "name" : "usedmem",
-        "type" : "ABSOLUTE",
-        "descr" : "Used Memory"
-      }, {
-        "name" : "freemem",
-        "type" : "ABSOLUTE",
-        "descr" : "Free Memory"
+        "descr" : "UpDown"
       } ]
     } ]
   } ],
   "name" : "register"
 }
+
