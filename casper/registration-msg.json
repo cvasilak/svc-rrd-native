@@ -1,0 +1,39 @@
+{
+  "instanceId" : "df212wxd-ff77-4c23-8208-7a0d5b0ced31",
+  "listeningQueue" : "jms:casper/svc_rrd?connectionFactory=#ConnectionFactory",
+  "nes" : [ {
+    "prefixId" : "100",
+    "groups" : [ {
+      "name" : "cpu",
+      "rras" : [ {
+        "name" : "cpu5sec",
+        "type" : "ABSOLUTE",
+        "descr" : "CPU 5sec"
+      }, {
+        "name" : "cpu5min",
+        "type" : "ABSOLUTE",
+        "descr" : "CPU 5min"
+      }, {
+        "name" : "cpu1min",
+        "type" : "ABSOLUTE",
+        "descr" : "CPU 1min"
+      } ]
+    }, {
+      "name" : "mem",
+      "rras" : [ {
+        "name" : "memutil",
+        "type" : "ABSOLUTE",
+        "descr" : "Utilization"
+      }, {
+        "name" : "usedmem",
+        "type" : "ABSOLUTE",
+        "descr" : "Used Memory"
+      }, {
+        "name" : "freemem",
+        "type" : "ABSOLUTE",
+        "descr" : "Free Memory"
+      } ]
+    } ]
+  } ],
+  "name" : "register"
+}
